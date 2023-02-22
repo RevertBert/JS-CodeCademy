@@ -1,0 +1,37 @@
+# JS-CodeCademy
+Meal Maker
+//     WHY DOES THIS CODE LOG 'undefined' ?
+
+// *Create a function for a restaurant's website that programs a daily special everyday*
+
+const menu = {
+  _menu: " ",
+  _price: 0,
+
+  set meal(mealToCheck) {
+    if (typeof meanToCheck === 'string') {
+      return this._meal = mealToCheck;
+    }
+   },
+
+  set price(priceToCheck) {
+    if (typeof priceToCheck === 'number') {
+      return this._price = priceToCheck;
+    }
+  },
+
+  get todaysSpecial() {
+    if (this._meal && this._price) {
+      return `Today's Special is ${this._meal} for ${this._price}!`
+    } else {
+      return 'Meal or price was not set'
+    }
+  }
+};
+menu.meal = 'Pho and Orange Soda';
+menu.price = 11;
+
+
+console.log(menu.todaysSpecial);
+
+
